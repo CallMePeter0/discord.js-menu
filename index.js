@@ -198,7 +198,7 @@ module.exports.Menu = class extends EventEmitter {
 
       if (reactionName) {
         if (typeof this.currentPage.reactions[reactionName] === 'function') {
-          return this.currentPage.reactions[reactionName]()
+          return this.currentPage.reactions[reactionName](reaction, user)
         }
 
         switch (this.currentPage.reactions[reactionName]) {
